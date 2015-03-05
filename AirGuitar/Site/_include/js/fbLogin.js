@@ -36,6 +36,11 @@ angular.module('CiulApp', ['facebook'])
                 $scope.byebye = false;
                 $scope.salutation = false;
 
+
+
+
+
+
                 /**
                  * Watch for Facebook to be ready.
                  * There's also the event that could be used
@@ -70,6 +75,7 @@ angular.module('CiulApp', ['facebook'])
                 $scope.IntentLogin = function() {
                     if (!userIsConnected) {
                         $scope.login();
+
                     }
                 };
 
