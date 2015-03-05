@@ -10,7 +10,7 @@ paypal.configure({
 });
 
 //tells the server to look into the /public folder for the static content
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/AirGuitar/Site'));
 
 //Creates the plans based on what is defined in model.js. 
 app.get('/payment/create-plan', function (req, res) {
