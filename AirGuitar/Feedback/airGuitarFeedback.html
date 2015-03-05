@@ -177,6 +177,7 @@
 
                         $scope.logout = function(loginProvider) {
                             $scope.currentUser = null;
+                            ref.unauth();
                         }
 
                         $scope.login = function(loginProvider) {
