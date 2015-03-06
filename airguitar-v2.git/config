@@ -9,4 +9,3 @@
 	url = https://DillyDallyKing@bitbucket.org/ccassignment2/airguitar-v2.git
 	fetch = +refs/*:refs/*
 	mirror = true
-	pushurl = https://github.com/AirGuitar/airguitar.git

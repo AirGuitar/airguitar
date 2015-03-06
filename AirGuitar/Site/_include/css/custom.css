@@ -211,11 +211,29 @@ html,html a {
 
 /**/
 
+#recordingList {
+    margin: 0;
+    padding: 0;
+    padding-bottom:50px;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#recordingList li[class*="span"] {
+    display: inline-block;
+    float: none;
+}
+
+#recordingList li[class*="span"]:first-child {
+    margin-left: 0;
+}
+
 #pedal-carousel .item{
 	background: url(../img/pedals/pedal-bg.png) no-repeat;
-	background-size: 150px 235px;
-	width:150px;
-	height:235px;
+	background-size: 90px 141px;
+	width:90px;
+	height:141px;
     margin: 5px;
     color: #FFF;
     -webkit-border-radius: 3px;
@@ -226,10 +244,89 @@ html,html a {
 
 #pedal-carousel .item:hover{
 	background: url(../img/pedals/pedal-bg-selected.png) no-repeat;
-	background-size: 150px 235px;
+	background-size: 90px 141px;
 	cursor: pointer;
 }
 
-.page-pedal-list{
-	background: #262626;	
+.tile-bg{
+	background: url(../img/tile.png);
+	background-repeat: repeat;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+   	-webkit-box-shadow: inset 0 0 10px #000000;
+   	box-shadow:         inset 0 0 10px #000000;
 }
+
+.page-pedal-list{
+	text-align: center;
+	background: url(../img/tile.png);
+	background-repeat: repeat;	
+	-moz-box-shadow:    inset 0 0 10px #000000;
+   	-webkit-box-shadow: inset 0 0 10px #000000;
+   	box-shadow:         inset 0 0 10px #000000;
+   	padding: 50px 0;
+   	height: 500px;
+}		
+
+.pedal-distortion{
+	background: url(../img/pedals/pedal-bg.png) no-repeat;
+	background-size: 150px 235px;
+	margin: 0 35px;
+	width:150px;
+	height:235px;
+}
+
+.white, .white a {
+  	color: #fff;
+  	opacity:70%;
+}
+
+.close:hover {
+	color: #fff;
+  	cursor: pointer;
+  	opacity:90%;
+}
+
+#recordinglist {
+    list-style-type: none;
+}
+
+
+    #recordinglist audio { 
+        display: block; 
+        margin-bottom: 10px; 
+    }
+    
+	canvas { 
+		display: inline-block; 
+		background: #f5f6f6; 
+		width: 100%;
+		height: 10%;
+	}
+	#controls {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		height: 50%;
+		width: 100%;
+	}
+	#record { height: 15vh; }
+	#record.recording { 
+		background: red;
+		background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+		background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+		background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+	}
+	#save, #save img { height: 10vh; }
+	#save { opacity: 0.25;}
+	#save[download] { opacity: 1;}
+	#viz {
+		height: 80%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+	
