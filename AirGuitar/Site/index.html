@@ -46,29 +46,33 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
         <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-            <!-- Facebook Login -->
-            <script src="_include/js/angular-facebook.js"></script>
-            <script src="_include/js/fbLogin.js"></script>
-            <!-- Facebook Login End -->
-            
-            <script src="_include/js/paypal.js"></script>
+
+        <!-- Facebook Login -->
+        <script src="_include/js/angular-facebook.js"></script>
+        <script src="_include/js/fbLogin.js"></script>
+        <!-- Facebook Login End -->
+
+        <script src="_include/js/paypal.js"></script>
 
         <!-- Script for pages END -->
         <!-- Analytics -->
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-4910263-10']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-            })();
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-60445377-1', 'auto');
+            ga('send', 'pageview');
+
         </script>
         <!-- End Analytics -->
         <!-- Location Map -->
@@ -250,7 +254,7 @@
                                     <img src="_include/img/profile/profile-brandon.jpg" alt="Brandon Seet" />
                                 </div>
                                 <h3 class="profile-name">Brandon Seet</h3>
-                                <p class="profile-description">Joined Air Guitar after a glass of cold beer offered by Kim, after that he sold his soul to making awesome music & products for Air Guitar. You'll mostly find him in our well stocked pantry, munching away on a peanut butter jello sandwich.</p>
+                                <p class="profile-description">Joined AirGuitar after a glass of cold beer with Kim, after that he sold his soul to making awesome music & products for Air Guitar. You'll mostly find him in our well stocked pantry, munching away on a peanut butter jello sandwich.</p>
                                 <div class="social">
                                     <ul class="social-icons">
                                         <li><a href="https://www.facebook.com/brandon.seet.7"><i class="font-icon-social-facebook"></i></a></li>
@@ -265,11 +269,11 @@
                     </div>
                 </div>
                 <!-- End Title Page -->
-            </br>
-        </br>
+                </br>
+                </br>
                 <div class="sep">
-                <span class="separator"></span>
-            </div>
+                    <span class="separator"></span>
+                </div>
 
                 <div class="row margin-40">
                     <div class="span4">
@@ -355,8 +359,8 @@
                                 </li>
                                 <li class="price-button" data-ng-show="logged" data-ng-disabled="!facebookReady"><a href="#">Join & Try Now!</a></li> <!-- Change aref to demo -->
                                 <li class="price-button" data-ng-show="!logged" data-ng-disabled="!facebookReady"><a onclick="jQuery('#modal-1').modal('show')">Join & Try Now!</a></li> 
-                            
-                                
+
+
                             </ul>
                         </li>
                         <li class="plan">
@@ -396,7 +400,7 @@
                     </ul>
                 </section>
             </div>
-            
+
             <div class="sep">
                 <span class="separator"></span>
             </div>
