@@ -457,75 +457,18 @@
         }
         }]);
         </script>
-        <!-- Google Tracking code. Change the UA-XXXXXXX key to be yours -->
-        <script>
-        (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-60445377-1', 'auto');
-        ga('send', 'pageview');
-        </script>
-        <!-- Model 1 for free fb login -->
-        <div class="modal fade in" id="modal-1" aria-hidden="false" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Require Login!</h4>
-                    </div>
-                    <div class="modal-body">
-                        Please Login to Facebook To Continue
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
-                        <button type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!--might need to add Aref here to link to demo -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Model 2 for semi pro fb login -->
-        <div class="modal fade in" id="modal-2" aria-hidden="false" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Require Login!</h4>
-                    </div>
-                    <div class="modal-body">
-                        Please Login to Facebook To Continue
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
-                        <button href="payment/initiate/1" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Model 2 for pro fb login -->
-        <div class="modal fade in" id="modal-3" aria-hidden="false" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Require Login!</h4>
-                    </div>
-                    <div class="modal-body">
-                        Please Login to Facebook To Continue
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
-                        <button href="payment/initiate/2" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <!-- Start Analytics -->
+    <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-60445377-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+    <!-- End Analytics -->
     </body>
 </html>

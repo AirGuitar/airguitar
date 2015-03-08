@@ -296,7 +296,7 @@ html,html a {
         margin-bottom: 10px; 
     }
     
-	canvas { 
+	.music-canvas { 
 		display: inline-block; 
 		background: #f5f6f6; 
 		width: 100%;

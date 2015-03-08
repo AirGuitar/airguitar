@@ -52,23 +52,6 @@
     <!-- Facebook Login End -->
     <script src="_include/js/paypal.js"></script>
     <!-- Script for pages END -->
-    <!-- Analytics -->
-    <script>
-    (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-    (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-    m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-60445377-1', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <!-- End Analytics -->
     <!-- Location Map -->
     <script src="//maps.googleapis.com/maps/api/js?sensor=true"></script> <!-- Google Map API -->
     <script>
@@ -86,7 +69,7 @@
                     });
                 marker.setMap(map);
                 var infowindow = new google.maps.InfoWindow({
-                    content: "<span style='font-size:large;'>AirGuitar</span>"
+                    content: "<span style='font-size:large;'><strong><span class='color-text'/>AirGuitar</span></strong> is here at <strong><span class='color-text'>SMU Labs</span></strong>!</span>"
                     });
         infowindow.open(map, marker);
         }
@@ -119,13 +102,14 @@
                     </div>
                 </div>
             </div>
-            <!--
             <div class="control-nav">
+                <!--
                 <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
-                <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
-            <ul id="slide-list"></ul>
-            -->
-            <a id="nextsection" href="#work" style="width:100%"><i class="font-icon-arrow-light-round-down"></i></a>
+                <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>-->
+                <a id="nextsection" href="#work" style="width:100%"><i class="font-icon-arrow-light-round-down"></i></a>
+            <!--<ul id="slide-list"></ul>-->
+            
+            
         </div>
     </div>
     <!-- End Homepage Slider -->
@@ -505,6 +489,20 @@
 
  </script>
     <!-- End Js -->
+
+    <!-- Start Analytics -->
+    <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-60445377-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+    <!-- End Analytics -->
+
     <!--
     <ul id="supersized" class="quality" style="visibility: visible;">
         <li class="slide-0" style="visibility: visible; top: 0px;">
