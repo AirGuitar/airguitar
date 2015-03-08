@@ -58,7 +58,7 @@
         <!-- End Analytics -->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
         <script src="//cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
- <script src="//cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+        <script src="//cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
         <!--<script src="_include/js/angular-facebook.js"></script>-->
         <!--<script src="_include/js/fbLogin.js"></script>-->
         <script src="_include/js/app.js"></script>
@@ -277,49 +277,47 @@
                                 </div>
                             </form>
                             <br/>
-                            <input type="checkbox" ng-model="hide_table" ng-init="hide_table = false"> Show submitted feedback.
-                            
                         </div>
                     </div>
                 </div>
                 <div>
-                            <table ng-show="hide_table" class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th class="hidden-xs">Edit</th>
-                                        <th>School</th>
-                                        <th>Start</th>
-                                        <th>Stop</th>
-                                        <th>Continue</th>
-                                        <th class="hidden-xs">Other</th>
-                                        <th class="hidden-xs">Delete</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="user in users">
-                                        <td class="hidden-xs">
-                                            <button class="btn" ng-click="editFeedback(user.$id)">
-                                            <span class="glyphicon glyphicon-pencil"></span>Edit
-                                            </button>
-                                        </td>
-                                        <td>{{ user.school }}</td>
-                                        <td>{{ user.start }}</td>
-                                        <td>{{ user.stop }}</td>
-                                        <td>{{ user.continue }}</td>
-                                        <td class="hidden-xs">{{ user.other }}</td>
-                                        <td class="hidden-xs">
-                                            <button class="btn" ng-click="deleteFeedback($index)">
-                                            <span class="glyphicon glyphicon-pencil"></span>Delete
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <br />
-                        </div>
+                    <input type="checkbox" ng-model="hide_table" ng-init="hide_table = false"> Show submitted feedback.
+                    <table ng-show="hide_table" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="hidden-xs">Edit</th>
+                                <th>School</th>
+                                <th>Start</th>
+                                <th>Stop</th>
+                                <th>Continue</th>
+                                <th class="hidden-xs">Other</th>
+                                <th class="hidden-xs">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="user in users">
+                                <td class="hidden-xs">
+                                    <button class="btn" ng-click="editFeedback(user.$id)">
+                                    <span class="glyphicon glyphicon-pencil"></span>Edit
+                                    </button>
+                                </td>
+                                <td>{{ user.school }}</td>
+                                <td>{{ user.start }}</td>
+                                <td>{{ user.stop }}</td>
+                                <td>{{ user.continue }}</td>
+                                <td class="hidden-xs">{{ user.other }}</td>
+                                <td class="hidden-xs">
+                                    <button class="btn" ng-click="deleteFeedback($index)">
+                                    <span class="glyphicon glyphicon-pencil"></span>Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                </div>
             </div>
         </div>
-
         <div class="page-alternate hipster2-bg">
             <div class="container">
                 <h1 style="color:#fff">Other Initiatives</h1>
@@ -358,7 +356,6 @@
                 </div>
             </div>
         </div>
-
         <!-- End Feedback -->
         <!-- Socialize -->
         <div id="social-area" class="page-alternate">
@@ -463,18 +460,15 @@
         }
         }]);
         </script>
-
         <!-- Start Analytics -->
-    <script>
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
- })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
- ga('create', 'UA-60445377-1', 'auto');
- ga('send', 'pageview');
-
-</script>
-    <!-- End Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-60445377-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Analytics -->
     </body>
 </html>
