@@ -178,7 +178,7 @@ angular.module('CiulApp', ['facebook', 'firebase'])
         console.log($rootScope.location);
 
         //store subscription
-        $scope.newMsg = {};
+        $scope.newSubscription = {};
         var theFirebaseURL = "https://airguitar-subscriptions.firebaseio.com/";
         var ref = new Firebase(theFirebaseURL);
 
