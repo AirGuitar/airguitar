@@ -192,7 +192,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <p>
-                                            <input id="contact_name" type="text" placeholder="Full Name" value="{{currentUser.facebook.displayName}}" name="name" />
+                                            <input id="contact_name" type="text" placeholder="Full Name" value="{{currentUser.facebook.displayName}}" name="name" disabled/>
                                         </p>
                                     </div>
                                 </div>
@@ -278,6 +278,9 @@
                             </form>
                             <br/>
                             <input type="checkbox" ng-model="hide_table" ng-init="hide_table = false"> Show submitted feedback.
+                            
+                        </div>
+                        <div>
                             <table ng-show="hide_table" class="table table-striped">
                                 <thead>
                                     <tr>
@@ -310,6 +313,7 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <br />
                         </div>
                     </div>
                 </div>

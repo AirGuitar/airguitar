@@ -89,7 +89,7 @@ module.exports = {
     'createAgreementData': function(tier, planId, address){
         return {
             "name": tier == '1'? "Air Guitar Semi-Pro Plan": "Air Guitar Pro Plan",
-            "description": tier == '1'? "Air Guitar Semi-Pro Plan 7 Pedal Slots for the cost of 5 Plan": "Air Guitar Pro Plan 15 Pedal Slots for the cost of 10 Plan",
+            "description": tier == '1'? "Air Guitar Semi-Pro Plan 7 Pedal Slots": "Air Guitar Pro Plan 15 Pedal Slots",
             "start_date": getStartDate(),
             "plan":{
                 "id": planId
