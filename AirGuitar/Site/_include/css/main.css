@@ -580,7 +580,7 @@ nav#menu #menu-nav li a {
 	color: #fff;
 	padding: 5px 10px;	
 	/*color: #AEAEAE;*/
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 300;
 	line-height: 60px;
 	display: block;
@@ -965,7 +965,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .map {
-	height: 600px;	
+	height: 300px;	
 }
 
 /* ==================================================

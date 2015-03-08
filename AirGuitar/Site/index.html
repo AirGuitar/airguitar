@@ -72,29 +72,33 @@
     <!-- Location Map -->
     <script src="//maps.googleapis.com/maps/api/js?sensor=true"></script> <!-- Google Map API -->
     <script>
-    var myCenter = new google.maps.LatLng(1.294692, 103.849824);
-    function initialize()
-    {
-    var mapProp = {
-    center: myCenter,
-    zoom: 18,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("locationMap"), mapProp);
-    var marker = new google.maps.Marker({
-    position: myCenter,
-    });
-    marker.setMap(map);
-    var infowindow = new google.maps.InfoWindow({
-    content: "<span style='font-size:large;'><strong><span class='color-text'/>AirGuitar</span></strong> is here at <strong><span class='color-text'>SMU Labs</span></strong>!</span>"
-    });
-    infowindow.open(map, marker);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
+        var myCenter = new google.maps.LatLng(1.294692, 103.849824);
+        function initialize()
+            {
+                var mapProp = {
+                        center: myCenter,
+                        zoom: 18,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                var map = new google.maps.Map(document.getElementById("locationMap"), mapProp);
+                var marker = new google.maps.Marker({
+                        position: myCenter,
+                    });
+                marker.setMap(map);
+                var infowindow = new google.maps.InfoWindow({
+                    content: "<span style='font-size:large;'>AirGuitar</span>"
+                    });
+        infowindow.open(map, marker);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <!-- End Location Map -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <body data-ng-app="CiulApp" data-ng-controller="MainController" >
+        <div class="alert alert-success alert-dismissible" role="alert" style="position: fixed; bottom: 10px; right: 10px; width: 300px; z-index: 50000; display:none">
+ <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ Thanks for your message! We'll get back to you in 2 working days!
+ </div>
         <!-- This section is for Splash Screen -->
         <div class="ole">
             <section id="jSplash">
@@ -115,11 +119,13 @@
                     </div>
                 </div>
             </div>
+            <!--
             <div class="control-nav">
                 <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
                 <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
             <ul id="slide-list"></ul>
-            <a id="nextsection" href="#work"><span>Click here to view AirGuitar<span></a>
+            -->
+            <a id="nextsection" href="#work" style="width:100%"><i class="font-icon-arrow-light-round-down"></i></a>
         </div>
     </div>
     <!-- End Homepage Slider -->
@@ -393,9 +399,7 @@
     </div>
     <!-- End Big Blockquote -->
     <!-- Google Map -->
-    <div id="map-area">
-        <div class="map" id="locationMap"></div>
-    </div>
+    
     <!-- End Google Map -->
     <!-- Contact Section -->
     <div id="contact" class="page">
@@ -412,7 +416,7 @@
             <!-- End Title Page -->
             <!-- Contact Form -->
             <div class="row">
-                <div class="span9" ng-controller="msgController">
+                <div class="span7" ng-controller="msgController">
                     <form id="contact-form" class="contact-form" action="#" />
                         <p class="contact-name">
                             <input id="contact_name" ng-model="newMsg.name" type="text" placeholder="Full Name" value="" name="name" />
@@ -421,7 +425,7 @@
                             <input id="contact_email" ng-model="newMsg.email" type="text" placeholder="Email Address" value="" name="email" />
                         </p>
                         <p class="contact-message">
-                            <textarea id="contact_message" ng-model="newMsg.message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
+                            <textarea id="contact_message" ng-model="newMsg.message" placeholder="Your Message" name="message" rows="10" cols="40"></textarea>
                         </p>
                         <p class="contact-submit">
                             <a id="contact-submit" class="submit" ng-click="save()">Send</a>
@@ -430,7 +434,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="span3">
+                <div class="span5">
                     <div class="contact-details">
                         <h3>Contact Details</h3>
                         <ul>
@@ -443,6 +447,9 @@
                                 <br />
                             </li>
                         </ul>
+                    </div>
+                    <div id="map-area">
+                        <div class="map" id="locationMap"></div>
                     </div>
                 </div>
             </div>
@@ -485,6 +492,18 @@
     <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
     <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
     <script src="_include/js/main.js"></script> <!-- Default JS -->
+    <script>
+ $('#contact-submit').click(function() {
+
+ $('.alert').fadeIn('slow');
+
+ })
+ $('.close').click(function() {
+
+ $('.alert').fadeOut('slow');
+ });
+
+ </script>
     <!-- End Js -->
     <!--
     <ul id="supersized" class="quality" style="visibility: visible;">
