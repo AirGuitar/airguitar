@@ -18,7 +18,7 @@ module.exports = {
     'plans': {
         //defines the plans that are available
         "1": {
-            "description": "Air Guitar Semi-Pro Plan 7 Pedal Slots for the cost of 5 Plan",
+            "description": "Air Guitar Semi-Pro Plan 7 Pedal Slots",
             "merchant_preferences": {
                 "auto_bill_amount": "yes",
                 "cancel_url": cancel_url,
@@ -35,7 +35,7 @@ module.exports = {
                 {
                     "amount": {
                         "currency": "SGD",
-                        "value": "20.99"
+                        "value": "29.99"
                     },
                     "cycles": "0",
                     "frequency": "MONTH",
@@ -48,7 +48,7 @@ module.exports = {
             "type": "INFINITE"
         },
         '2': {
-            "description": "Air Guitar Pro Plan 15 Pedal Slots for the cost of 10 Plan",
+            "description": "Air Guitar Pro Plan 15 Pedal Slots",
             "merchant_preferences": {
                 "auto_bill_amount": "yes",
                 "cancel_url": cancel_url,
@@ -65,7 +65,7 @@ module.exports = {
                 {
                     "amount": {
                         "currency": "SGD",
-                        "value": "41.99"
+                        "value": "62.99"
                     },
                     "cycles": "0",
                     "frequency": "MONTH",

@@ -345,3 +345,17 @@ html,html a {
 .banner-link:hover{
 	color:#fff;
 }
+
+.splash-page-header{
+	color:#fff;
+	font-size:64px;
+}
+
+.splash-page-link{
+	color:#fff;
+	font-size:32px;
+}
+
+.splash-page-link:hover{
+	color:#F7770A;
+}
