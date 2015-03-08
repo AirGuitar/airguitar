@@ -1,4 +1,4 @@
-angular.module('CiulApp', ['facebook'])
+angular.module('CiulApp', ['facebook','firebase'])
 
         .config([
             'FacebookProvider',
@@ -166,6 +166,21 @@ angular.module('CiulApp', ['facebook'])
                 });
 
 
+            }
+        ])
+
+        .controller('msgController', ['$scope', '$firebase',
+            function($scope, $firebase) {
+                
+                $scope.newMsg = {};
+                var theFirebaseURL = "https://airguitar-messages.firebaseio.com/";
+                var ref = new Firebase(theFirebaseURL);
+                
+                $scope.messages = $firebase(ref.child("messages")).$asArray();
+                $scope.save = function() {
+                    
+                    $scope.messages.$add($scope.newMsg);
+                };
             }
         ])
 

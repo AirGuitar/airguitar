@@ -77,7 +77,7 @@ CHAKRA.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/hiring-video-banner.jpg', title : '<div class="slide-content"><a href="https://www.youtube.com/watch?v=i5fVHytUfTo">AirGuitar is Hiring!</a></div>', thumb : '', url : ''}
+											{image : '_include/img/slider-images/hiring-video-banner.jpg', title : '<div class="slide-content"><h1><strong>Welcome to <span class="color-text">AirGuitar</span></strong></h1><p><a href="https://www.youtube.com/watch?v=i5fVHytUfTo">We are hiring. Click here to check us out!</a></p></div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   

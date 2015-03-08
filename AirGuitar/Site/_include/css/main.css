@@ -454,7 +454,7 @@ h3.spec {
 }
 
 #home-slider ul#slide-list li a:hover {
-	background-color: #F7770A;	
+	background-color: #fff;	
 }
 
 #home-slider ul#slide-list li.current-slide a,
@@ -463,7 +463,7 @@ h3.spec {
 }
 
 #home-slider #nextsection {
-	background-color: #E0E0E0;
+	background-color: #C45E07;
 	margin: 0;
 	position: relative;
 	float:right;
@@ -492,6 +492,10 @@ h3.spec {
 
 #home-slider #nextsection i {
 	margin-left: -7px;	
+}
+
+#home-slider #nextsection span{
+	color: #fff;
 }
 
 
@@ -565,7 +569,7 @@ nav#menu #menu-nav {
 nav#menu #menu-nav li {
 	list-style: none;
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 15px;
 }
 
 nav#menu #menu-nav li:first-child {
@@ -576,7 +580,7 @@ nav#menu #menu-nav li a {
 	color: #fff;
 	padding: 5px 10px;	
 	/*color: #AEAEAE;*/
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	line-height: 60px;
 	display: block;
