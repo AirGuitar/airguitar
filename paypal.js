@@ -92,13 +92,13 @@ app.get('/app.html/', function (req, res) {
             }
             else{
                 res.json({'status':'success', 'data': agreement});
-                res.redirect(__dirname + '/AirGuitar/Site/app.html');
+                //res.redirect(__dirname + '/AirGuitar/Site/app.html');
             }
         });
     }
     else{
         res.json({'status':'failed'})
-        res.redirect(__dirname + '/AirGuitar/Site/index.html');
+        //res.redirect(__dirname + '/AirGuitar/Site/index.html');
     }
 })
 
