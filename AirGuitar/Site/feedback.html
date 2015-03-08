@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <!-- Meta Tags -->
+        <title>AirGuitar</title>
+        <meta name="description" content="" />
+        <!-- Mobile Specifics -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="320" />
+        <!-- Mobile Internet Explorer ClearType Technology -->
+        <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
+        <!-- Bootstrap -->
+        <link href="_include/css/bootstrap.css" rel="stylesheet" />
+        <link href="_include/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Main Style -->
+        <link href="_include/css/main.css" rel="stylesheet" />
+        <!-- Supersized -->
+        <link href="_include/css/supersized.css" rel="stylesheet" />
+        <link href="_include/css/supersized.shutter.css" rel="stylesheet" />
+        <!-- FancyBox -->
+        <link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet" />
+        <!-- Font Icons -->
+        <link href="_include/css/fonts.css" rel="stylesheet" />
+        <!-- Shortcodes -->
+        <link href="_include/css/shortcodes.css" rel="stylesheet" />
+        <!-- Responsive -->
+        <link href="_include/css/bootstrap-responsive.min.css" rel="stylesheet" />
+        <link href="_include/css/responsive.css" rel="stylesheet" />
+        <!-- Custom CSS -->
+        <link href="_include/css/custom.css" rel="stylesheet" />
+        <!-- Google Font -->
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+        <!-- Fav Icon -->
+        <link rel="shortcut icon" href="#" />
+        <link rel="apple-touch-icon" href="#" />
+        <link rel="apple-touch-icon" sizes="114x114" href="#" />
+        <link rel="apple-touch-icon" sizes="72x72" href="#" />
+        <link rel="apple-touch-icon" sizes="144x144" href="#" />
+        <!-- Modernizr -->
+        <script src="_include/js/modernizr.js"></script>
+        <!-- Analytics -->
+        <script>
+        (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-60445377-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Analytics -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+        <script src="_include/js/angular-facebook.js"></script>
+        <script src="_include/js/fbLogin.js"></script>
+        <script src="_include/js/app.js"></script>
+        <title>Air Guitar Feedback Page</title>
+    </head>
+    <body ng-controller="userController">
+        <div class="alert alert-success alert-dismissible" role="alert" style="position: fixed; top: 10px; right: 10px; width: 300px; z-index: 50000; display:none">
+            <button type="button" class="close"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            Your feedback has been submitted! Thank you very much!
+        </div>
+        <!-- Header -->
+        <header  >
+            <div class="sticky-nav" >
+                <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+                <div id="logo">
+                    <a id="goUp" href="index.html#home-slider" title="AirGuitar">AirGuitar</a>
+                </div>
+                <nav id="menu">
+                    <ul id="menu-nav" >
+                        <li><a href="index.html#home-slider">Home</a></li>
+                        <li><a href="index.html#work">Air Guitar</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="feedback.html#">Feedback</a></li>
+                        <li><a href="app.html#">Try AirGuitar</a></li>
+                        <li data-ng-show="logged" data-ng-disabled="!facebookReady" style="color : #fff;"><img ng-src="{{image}}" class="img-rounded" style=" height:30px ;"/> {{user.name}}</li>
+                        <li>
+                            <a data-ng-show="!logged" data-ng-disabled="!facebookReady" data-ng-click="IntentLogin()">Login with Facebook</a>
+                            <a data-ng-show="logged" data-ng-disabled="!facebookReady" data-ng-click="logout()"> Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start Feedback -->
+        <div class="page">
+            <div class="container">
+                <h1>Why we need your feedback</h1>
+                <p>
+                    The Singapore Government has launched a scheme where they will pay university students and recent graduates to work for local SaaS companies for up to 1 year. In addition to this government-funded subsidy, we are authorized to pay you an incentive bonus plan based on your ability to facilitate the growth of our SaaS business. Our company’s bonus plan will pay you the full amount of all recurring revenue that you personally help to facilitate. We will continue to award you all recurring revenue for 1 year after you leave the company. Please watch our short onboarding video to get an understanding of our service. After that, we would appreciate your feedback on what we could do to increase the possibility of you joining our company to help facilitate our growth.
+                </p>
+                <div class="row">
+                    <div class="span12">
+                        <!-- People -->
+                        <div class="row">
+                            <!-- Start Profile -->
+                            <div class="span6 profile">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap" style="background:#000;">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-text-thumb"><a class="banner-link" href="https://airguitar.herokuapp.com">Click here</a> to open our app in another tab</span>
+                                    </div>
+                                    <img src="_include/img/airguitar-banner-lg.png" alt="AirGuitar App" />
+                                </div>
+                            </div>
+                            <!-- End Profile -->
+                            <!-- Start Profile -->
+                            <div class="span6 profile">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap" style="background:#000;">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-text-thumb"><a class="banner-link" href="https://www.youtube.com/watch?v=i5fVHytUfTo">Click here</a> to watch our overview video</span>
+                                    </div>
+                                    <img src="_include/img/airguitar-video-banner.png" alt="AirGuitar Overview Video" />
+                                </div>
+                            </div>
+                            <!-- End Profile -->
+                        </div>
+                        <!-- End People -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-quote page-alternate hipster-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <p style="color: #fff;">As one of our users, your feedback is very important to us. Let us know what you love about our service and what can we do to improve it. Help us make your experience better.</p>
+                        <span class="font-icon-blockquote"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="container">
+                <h1>Your Feedback</h1>
+                <!-- Show this div when the users is logged in -->
+                <div ng-show="currentUser">
+                    <p>
+                        You are logged in as: {{currentUser.facebook.displayName}} <img ng-src="{{currentUser.facebook.cachedUserProfile.picture.data.url}}" class="img-circle"/>
+                    </p>
+                    <span>
+                        <a class="general-btn" ng-click="editFeedback('new')">Click here to leave feedback</a>
+                    </span>
+                    <span>
+                        <a class="general-btn" ng-click="logout()">Logout</a>
+                    </span>
+                    <!--
+                    <button class="btn btn-success" ng-click="editFeedback('new')">
+                    <span class="glyphicon"></span>Click here to leave feedback.
+                    </button>
+                    <button class="btn btn-danger" ng-click="logout()">
+                    <span class="glyphicon"></span>Logout </button>
+                    -->
+                </div>
+                <!-- Show this div when the user is not logged in -->
+                <div ng-hide="currentUser">
+                    <span>
+                        <a class="general-btn" ng-click="login('facebook')">Login to Facebook to leave feedback</a>
+                    </span>
+                    <!--
+                    <button class="btn btn-success" ng-click="login('facebook')">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Login to leave feedback.
+                    </button>
+                    -->
+                </div>
+                <br/>
+                <div ng-show="edit">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="contact-form">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="feedback-label">
+                                            Facebook Name:
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>
+                                            <input id="contact_name" type="text" placeholder="Full Name" value="{{currentUser.facebook.displayName}}" name="name" />
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="feedback-label">
+                                            SMU Email:
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>
+                                            <input type="text" ng-model="newuser.email" ng-disabled="!edit" placeholder="John.Doe@smu.edu.sg">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="feedback-label">
+                                            School:
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>
+                                            <input type="text" ng-model="newuser.school" ng-disabled="!edit" placeholder="School (MBA, MM, Bus, SS, Econ)">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="feedback-label">
+                                            What should we start doing?
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>
+                                            <textarea type=text ng-model="newuser.start" ng-disabled="!edit" placeholder="You should start..." name="message" rows="3" cols="50"></textarea>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="feedback-label">
+                                            What should we stop doing?
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>
+                                            <textarea type=text ng-model="newuser.stop" ng-disabled="!edit" placeholder="You should stop..." name="message" rows="3" cols="50"></textarea>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="feedback-label">
+                                            What should we continue doing?
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>
+                                            <textarea type=text ng-model="newuser.continue" ng-disabled="!edit" placeholder="You should start..." name="message" rows="3" cols="50"></textarea>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="feedback-label">
+                                            What other recommendations do you have?
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>
+                                            <textarea type=text ng-model="newuser.other" ng-disabled="!edit" placeholder="You should also..." name="message" rows="3" cols="50"></textarea>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <p class="contact-submit">
+                                            <a id="submitIT" class="submit" ng-click="save()">Save Feedback</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                            <br/>
+                            <input type="checkbox" ng-model="hide_table" ng-init="hide_table = false"> Show submitted feedback.
+                            <table ng-show="hide_table" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="hidden-xs">Edit</th>
+                                        <th>School</th>
+                                        <th>Start</th>
+                                        <th>Stop</th>
+                                        <th>Continue</th>
+                                        <th class="hidden-xs">Other</th>
+                                        <th class="hidden-xs">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="user in users">
+                                        <td class="hidden-xs">
+                                            <button class="btn" ng-click="editFeedback(user.$id)">
+                                            <span class="glyphicon glyphicon-pencil"></span>Edit
+                                            </button>
+                                        </td>
+                                        <td>{{ user.school }}</td>
+                                        <td>{{ user.start }}</td>
+                                        <td>{{ user.stop }}</td>
+                                        <td>{{ user.continue }}</td>
+                                        <td class="hidden-xs">{{ user.other }}</td>
+                                        <td class="hidden-xs">
+                                            <button class="btn" ng-click="deleteFeedback($index)">
+                                            <span class="glyphicon glyphicon-pencil"></span>Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-alternate hipster2-bg">
+            <div class="container">
+                <h1>Other Initiatives</h1>
+                <p>
+                    We're not the only guys creating cool stuff. Other people like us have been exploring and creating new interesting and innovative products and services. If you still have the time and energy to discover more awesome stuff, do consider visiting the products and services created by the guys below:
+                </p>
+                <div class="row">
+                    <div class="span12">
+                        <!-- People -->
+                        <div class="row">
+                            <!-- Start Profile -->
+                            <div class="span6 profile">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap" style="background:#000;">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-text-thumb"><a class="banner-link" href="#">Click here</a> to visit AppName</span>
+                                    </div>
+                                    <img src="_include/img/airguitar-banner-lg.png" alt="AirGuitar App" />
+                                </div>
+                            </div>
+                            <!-- End Profile -->
+                            <!-- Start Profile -->
+                            <div class="span6 profile">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap" style="background:#000;">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-text-thumb"><a class="banner-link" href="#">Click here</a> to visit AppName</span>
+                                    </div>
+                                    <img src="_include/img/airguitar-banner-lg.png" alt="AirGuitar Overview Video" />
+                                </div>
+                            </div>
+                            <!-- End Profile -->
+                        </div>
+                        <!-- End People -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Feedback -->
+        <!-- Socialize -->
+        <div id="social-area" class="page-alternate">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <nav id="social">
+                            <ul>
+                                <li><a href="#social-area" title="Follow Us on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                                <li><a href="#social-area" title="Follow Us on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+                                <li><a href="#social-area" title="Follow Us on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <p class="credits" style="padding-top:100px;">&copy;2013 AirGuitar.</p>
+            </div>
+        </div>
+        <!-- End Socialize -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+        <script src="_include/js/jquery-1.9.1.min.js"></script>
+        <script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+        <script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
+        <script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
+        <script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
+        <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+        <script>
+        $('#submitIT').click(function() {
+        $('.alert').fadeIn('slow');
+        })
+        $('.close').click(function() {
+        $('.alert').fadeOut('slow');
+        });
+        var myApp = angular.module("myApp", ["firebase"]);
+        myApp.controller('userController', ['$scope', '$firebase',
+        function($scope, $firebase) {
+        $scope.newuser = {};
+        // Here is where you update your Firebase URL.
+        var theFirebaseURL = "https://airguitar-cc.firebaseio.com/";
+        var ref = new Firebase(theFirebaseURL);
+        $scope.users = $firebase(ref.child("feedback")).$asArray();
+        $scope.edit = false;
+        $scope.error = false;
+        $scope.incomplete = false;
+        $scope.currentUser = null;
+        //Check to see if the users is already logged in to Firebase and update currentUser if yes.
+        var authData = ref.getAuth();
+        if (authData && authData != {}) {
+        $scope.currentUser = $firebase(ref.child("user").child(authData.uid)).$asObject();
+        } else {
+        console.log("User is logged out");
+        }
+        $scope.logout = function(loginProvider) {
+        $scope.currentUser = null;
+        ref.unauth();
+        }
+        $scope.login = function(loginProvider) {
+        ref.authWithOAuthPopup(loginProvider, function(error, authData) {
+        if (error) {
+        console.log("Login Failed!", error);
+        } else {
+        console.log("Authenticated successfully with payload:", authData);
+        //Add the user to the users list.
+        ref.child("user/" + authData.uid).transaction(function(currentValue) {
+        console.log(authData);
+        return authData;
+        });
+        $scope.currentUser = $firebase(ref.child("user").child(authData.uid)).$asObject();
+        $scope.users = $firebase(ref.child("feedback")).$asArray();
+        }
+        });
+        }
+        $scope.editFeedback = function(id) {
+        $scope.currentId = id;
+        if (id == 'new') {
+        $scope.edit = true;
+        $scope.incomplete = true;
+        $scope.newuser = {};
+        console.log("new feedback.");
+        } else {
+        $scope.edit = true;
+        $scope.newuser = $firebase(ref.child("feedback").child(id)).$asObject();
+        console.log("existing feedback.");
+        }
+        };
+        $scope.save = function() {
+        //Add new if no index is passed in.
+        if ($scope.currentId == 'new') {
+        //Add the currentUser UID.
+        $scope.newuser.uid = $scope.currentUser.uid;
+        $scope.newuser.name = $scope.currentUser.facebook.cachedUserProfile.name;
+        $scope.users.$add($scope.newuser);
+        }
+        else {
+        $scope.newuser.$save();
+        }
+        $scope.edit = false;
+        };
+        $scope.deleteFeedback = function(index) {
+        $scope.users.$remove(index);
+        console.log("removing " + index);
+        }
+        }]);
+        </script>
+        <!-- Google Tracking code. Change the UA-XXXXXXX key to be yours -->
+        <script>
+        (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-60445377-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- Model 1 for free fb login -->
+        <div class="modal fade in" id="modal-1" aria-hidden="false" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Require Login!</h4>
+                    </div>
+                    <div class="modal-body">
+                        Please Login to Facebook To Continue
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!--might need to add Aref here to link to demo -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Model 2 for semi pro fb login -->
+        <div class="modal fade in" id="modal-2" aria-hidden="false" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Require Login!</h4>
+                    </div>
+                    <div class="modal-body">
+                        Please Login to Facebook To Continue
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
+                        <button href="payment/initiate/1" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Model 2 for pro fb login -->
+        <div class="modal fade in" id="modal-3" aria-hidden="false" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Require Login!</h4>
+                    </div>
+                    <div class="modal-body">
+                        Please Login to Facebook To Continue
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
+                        <button href="payment/initiate/2" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

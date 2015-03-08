@@ -329,4 +329,19 @@ html,html a {
 		align-items: center;
 	}
 }
-	
+
+.hipster-bg{
+	background: ;
+	background: url(../img/hipster-banner.png) no-repeat;
+	background-size: 100% 294px;
+}
+
+.hipster2-bg{
+	background: ;
+	background: url(../img/hipster-banner2.png) no-repeat;
+	background-size: 100% 483px;
+}
+
+.banner-link:hover{
+	color:#fff;
+}

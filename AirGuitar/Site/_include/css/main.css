@@ -662,14 +662,14 @@ nav#menu #menu-nav li a:hover {
 
 .page {
 	background: #F5F6F6;
-	padding: 100px 0;
+	padding: 40px 0;
 	position: relative;
 	z-index: 99;
 }
 
 .page-alternate {
 	background: #FFFFFF;
-	padding: 100px 0;
+	padding: 40px 0;
 	position: relative;
 	z-index: 99;
 }
@@ -1286,6 +1286,12 @@ nav#menu #menu-nav li a:hover {
 	margin-bottom: 1px;	
 }
 
+.feedback-label{
+	text-align:right;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
 #contact-form input,
 #contact-form textarea {
     border: none;
@@ -1350,6 +1356,35 @@ nav#menu #menu-nav li a:hover {
 	margin-top: 20px;
 	color: #55606A;
 }
+
+.general-btn{
+	background: #E0E0E0;
+    color: #55606A;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 40px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+	margin-top: 30px;
+	
+	-webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;	
+	   -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+		 -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
+		    transition: background 0.1s linear 0s, color 0.1s linear 0s;
+}
+
+.general-btn:hover{
+	background: #FF7B3A;
+	color: #ffffff;
+}
+
+.general-btn a:hover{
+	color: #ffffff;
+}
+
 
 
 /* ==================================================
@@ -1740,4 +1775,8 @@ footer .credits {
       -ms-transition: none;
        -o-transition: none;
           transition: none;
+}
+
+.align-right{
+	text-align: center;
 }

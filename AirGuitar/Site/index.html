@@ -4,102 +4,96 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
-    <head>
-        <!-- Meta Tags -->
-        <title>AirGuitar</title>
-        <meta name="description" content="" />
-        <!-- Mobile Specifics -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="HandheldFriendly" content="true" />
-        <meta name="MobileOptimized" content="320" />
-        <!-- Mobile Internet Explorer ClearType Technology -->
-        <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
-        <!-- Bootstrap -->
-        <link href="_include/css/bootstrap.min.css" rel="stylesheet" />
-        <!-- Main Style -->
-        <link href="_include/css/main.css" rel="stylesheet" />
-        <!-- Supersized -->
-        <link href="_include/css/supersized.css" rel="stylesheet" />
-        <link href="_include/css/supersized.shutter.css" rel="stylesheet" />
-        <!-- FancyBox -->
-        <link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet" />
-        <!-- Font Icons -->
-        <link href="_include/css/fonts.css" rel="stylesheet" />
-        <!-- Shortcodes -->
-        <link href="_include/css/shortcodes.css" rel="stylesheet" />
-        <!-- Responsive -->
-        <link href="_include/css/bootstrap-responsive.min.css" rel="stylesheet" />
-        <link href="_include/css/responsive.css" rel="stylesheet" />
-        <!-- Custom CSS -->
-        <link href="_include/css/custom.css" rel="stylesheet" />
-        <!-- Google Font -->
-        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
-        <!-- Fav Icon -->
-        <link rel="shortcut icon" href="#" />
-        <link rel="apple-touch-icon" href="#" />
-        <link rel="apple-touch-icon" sizes="114x114" href="#" />
-        <link rel="apple-touch-icon" sizes="72x72" href="#" />
-        <link rel="apple-touch-icon" sizes="144x144" href="#" />
-        <!-- Modernizr -->
-        <script src="_include/js/modernizr.js"></script>
-        <!-- Script for pages -->
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-        <script src="//cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-        <script src="//cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
-
-
-        <!-- Facebook Login -->
-        <script src="_include/js/angular-facebook.js"></script>
-        <script src="_include/js/fbLogin.js"></script>
-        <!-- Facebook Login End -->
-
-        <script src="_include/js/paypal.js"></script>
-
-        <!-- Script for pages END -->
-        <!-- Analytics -->
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-60445377-1', 'auto');
-            ga('send', 'pageview');
-
-        </script>
-        <!-- End Analytics -->
-        <!-- Location Map -->
-        <script src="//maps.googleapis.com/maps/api/js?sensor=true"></script> <!-- Google Map API -->
-        <script>
-            var myCenter = new google.maps.LatLng(1.294692, 103.849824);
-            function initialize()
-            {
-                var mapProp = {
-                    center: myCenter,
-                    zoom: 18,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-                var map = new google.maps.Map(document.getElementById("locationMap"), mapProp);
-                var marker = new google.maps.Marker({
-                    position: myCenter,
-                });
-                marker.setMap(map);
-                var infowindow = new google.maps.InfoWindow({
-                    content: "<span style='font-size:large;'><strong><span class='color-text'/>AirGuitar</span></strong> is here at <strong><span class='color-text'>SMU Labs</span></strong>!</span>"
-                });
-                infowindow.open(map, marker);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-        <!-- End Location Map -->
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<head>
+    <!-- Meta Tags -->
+    <title>AirGuitar</title>
+    <meta name="description" content="" />
+    <!-- Mobile Specifics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <!-- Mobile Internet Explorer ClearType Technology -->
+    <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
+    <!-- Bootstrap -->
+    <link href="_include/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main Style -->
+    <link href="_include/css/main.css" rel="stylesheet" />
+    <!-- Supersized -->
+    <link href="_include/css/supersized.css" rel="stylesheet" />
+    <link href="_include/css/supersized.shutter.css" rel="stylesheet" />
+    <!-- FancyBox -->
+    <link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <!-- Font Icons -->
+    <link href="_include/css/fonts.css" rel="stylesheet" />
+    <!-- Shortcodes -->
+    <link href="_include/css/shortcodes.css" rel="stylesheet" />
+    <!-- Responsive -->
+    <link href="_include/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="_include/css/responsive.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="_include/css/custom.css" rel="stylesheet" />
+    <!-- Google Font -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="#" />
+    <link rel="apple-touch-icon" href="#" />
+    <link rel="apple-touch-icon" sizes="114x114" href="#" />
+    <link rel="apple-touch-icon" sizes="72x72" href="#" />
+    <link rel="apple-touch-icon" sizes="144x144" href="#" />
+    <!-- Modernizr -->
+    <script src="_include/js/modernizr.js"></script>
+    <!-- Script for pages -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="//cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <script src="//cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+    <!-- Facebook Login -->
+    <script src="_include/js/angular-facebook.js"></script>
+    <script src="_include/js/fbLogin.js"></script>
+    <!-- Facebook Login End -->
+    <script src="_include/js/paypal.js"></script>
+    <!-- Script for pages END -->
+    <!-- Analytics -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-60445377-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Analytics -->
+    <!-- Location Map -->
+    <script src="//maps.googleapis.com/maps/api/js?sensor=true"></script> <!-- Google Map API -->
+    <script>
+    var myCenter = new google.maps.LatLng(1.294692, 103.849824);
+    function initialize()
+    {
+    var mapProp = {
+    center: myCenter,
+    zoom: 18,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("locationMap"), mapProp);
+    var marker = new google.maps.Marker({
+    position: myCenter,
+    });
+    marker.setMap(map);
+    var infowindow = new google.maps.InfoWindow({
+    content: "<span style='font-size:large;'><strong><span class='color-text'/>AirGuitar</span></strong> is here at <strong><span class='color-text'>SMU Labs</span></strong>!</span>"
+    });
+    infowindow.open(map, marker);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <!-- End Location Map -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <body data-ng-app="CiulApp" data-ng-controller="MainController" >
         <!-- This section is for Splash Screen -->
         <div class="ole">
@@ -123,483 +117,453 @@
             <div class="control-nav">
                 <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
                 <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
-                <ul id="slide-list"></ul>
-                <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
-            </div>
+            <ul id="slide-list"></ul>
+            <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
         </div>
-        <!-- End Homepage Slider -->
-        <!-- Header -->
-        <header >
-            <div class="sticky-nav" >
-                <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
-                <div id="logo">
-                    <a id="goUp" href="index.html#home-slider" title="AirGuitar">AirGuitar</a>
-                </div>
-
-                <nav id="menu">
-                    <ul id="menu-nav" >
-                        <li><a href="index.html#home-slider">Home</a></li>
-                        <li><a href="index.html#work">Air Guitar</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
-                        <li><a href="app.html#">Try AirGuitar</a></li>
-                        <li data-ng-show="logged" data-ng-disabled="!facebookReady" style="color : #fff;"><img ng-src="{{image}}" class="img-rounded" style=" height:30px ;"/> {{user.name}}</li>
-                        <li>
-                            <a data-ng-show="!logged" data-ng-disabled="!facebookReady" data-ng-click="IntentLogin()">Login with Facebook</a>
-
-                            <a data-ng-show="logged" data-ng-disabled="!facebookReady" data-ng-click="logout()"> Logout</a>
-
-                        </li>
-                    </ul>
-                </nav>
+    </div>
+    <!-- End Homepage Slider -->
+    <!-- Header -->
+    <header >
+        <div class="sticky-nav" >
+            <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+            <div id="logo">
+                <a id="goUp" href="index.html#home-slider" title="AirGuitar">AirGuitar</a>
             </div>
-        </header>
-        <!-- End Header -->
-        <!-- Our Work Section -->
-        <div id="work" class="page">
-            <div class="container">
-                <!-- Title Page -->
-                <div class="row">
-                    <div class="span12">
-                        <div class="title-page">
-                            <h2 class="title">Air Guitar</h2>
-                            <div class="page-description">
-                                <p> Air Guitar takes the hassle and cost out of making good music with effects pedals by throwing them up into the cloud !
-                                </p>
-                            </div>
-
-                            <!-- Services Boxes -->
-                            <div class="row">
-                                <div class="span4">
-                                    <div class="services-box">
-                                        <div class="icon">
-                                            <span class="font-icon-cog"></span>
-                                        </div>
-                                        <h3>Choose Your Pedals</h3>
-                                        <p>Choose from a variety of over 30 pedals ranging from the basic electro-harmonix Soul Food Distortion/Overdrive Pedal to Van Halen’s MXR Phase 90 and Flanger Pedals.</p>
-                                    </div>
-                                </div>
-                                <div class="span4">
-                                    <div class="services-box">
-                                        <div class="icon">
-                                            <span class="font-icon-layer"></span>
-                                        </div>
-                                        <h3>Customize Your Set Up</h3>
-                                        <p>Mix and match the pedals of your choice and switch em’ up whenever you need to. Create your own unique sick solos!</p>
-                                    </div>
-                                </div>
-                                <div class="span4">
-                                    <div class="services-box">
-                                        <div class="icon">
-                                            <span class="font-icon-map"></span>
-                                        </div>
-                                        <h3>Record Your Tracks</h3>
-                                        <p>Record what you made and be the next Jimi Hendrix.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Services Boxes -->
-                        </div>
-                    </div>
-                </div>
-                <!-- End Title Page -->
-            </div>
+            <nav id="menu">
+                <ul id="menu-nav" >
+                    <li><a href="index.html#home-slider">Home</a></li>
+                    <li><a href="index.html#work">Air Guitar</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                    <li><a href="feedback.html#">Feedback</a></li>
+                    <li><a href="app.html#">Try AirGuitar</a></li>
+                    <li data-ng-show="logged" data-ng-disabled="!facebookReady" style="color : #fff;"><img ng-src="{{image}}" class="img-rounded" style=" height:30px ;"/> {{user.name}}</li>
+                    <li>
+                        <a data-ng-show="!logged" data-ng-disabled="!facebookReady" data-ng-click="IntentLogin()">Login with Facebook</a>
+                        <a data-ng-show="logged" data-ng-disabled="!facebookReady" data-ng-click="logout()"> Logout</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <!-- End Our Work Section -->
-        <!-- About Section -->
-        <div id="about" class="page-alternate">
-            <div class="container">
-                <!-- Title Page -->
-                <div class="row">
-                    <div class="span12">
-                        <div class="title-page">
-                            <h2 class="title">About Us</h2>
-                            <h3 class="title-description">Our Team</h3>
-                            <div class="page-description">
-                                <p>We’re a pair of fun loving, guitar smashing entrepreneurs bred from the flames of Singapore Management University School of Information Systems.</p>
-                            </div>
+    </header>
+    <!-- End Header -->
+    <!-- Our Work Section -->
+    <div id="work" class="page">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">Air Guitar</h2>
+                        <div class="page-description">
+                            <p> Air Guitar takes the hassle and cost out of making good music with effects pedals by throwing them up into the cloud !
+                            </p>
                         </div>
-                        <!-- People -->
+                        <!-- Services Boxes -->
                         <div class="row">
-
-                            <!-- Start Profile -->
-                            <div class="span6 profile">
-                                <div class="image-wrap">
-                                    <div class="hover-wrap">
-                                        <span class="overlay-img"></span>
-                                        <span class="overlay-text-thumb">CEO/Founder</span>
+                            <div class="span4">
+                                <div class="services-box">
+                                    <div class="icon">
+                                        <span class="font-icon-cog"></span>
                                     </div>
-                                    <img src="_include/img/profile/profile-kim.jpg" alt="Kim Evangelista" />
-                                </div>
-                                <h3 class="profile-name">Kim Evangelista</h3>
-                                <p class="profile-description">Started AirGuitar because effects pedals are too damn expensive. His hair is much longer than what the picture above shows. Strongly believes that beer is good for idea generation and coffee is for execution.</p>
-                                <div class="social">
-                                    <ul class="social-icons">
-                                        <li><a href="//www.facebook.com/kime924"><i class="font-icon-social-facebook"></i></a></li>
-                                        <li><a href="//twitter.com/kime924"><i class="font-icon-social-twitter"></i></a></li>
-                                        <li><a href="//sg.linkedin.com/in/kimevangelista"><i class="font-icon-social-linkedin"></i></a></li>
-                                    </ul>
+                                    <h3>Choose Your Pedals</h3>
+                                    <p>Choose from a variety of over 30 pedals ranging from the basic electro-harmonix Soul Food Distortion/Overdrive Pedal to Van Halen’s MXR Phase 90 and Flanger Pedals.</p>
                                 </div>
                             </div>
-                            <!-- End Profile -->
-                            <!-- Start Profile -->
-                            <div class="span6 profile">
-                                <div class="image-wrap">
-                                    <div class="hover-wrap">
-                                        <span class="overlay-img"></span>
-                                        <span class="overlay-text-thumb">CFO</span>
+                            <div class="span4">
+                                <div class="services-box">
+                                    <div class="icon">
+                                        <span class="font-icon-layer"></span>
                                     </div>
-                                    <img src="_include/img/profile/profile-brandon.jpg" alt="Brandon Seet" />
-                                </div>
-                                <h3 class="profile-name">Brandon Seet</h3>
-                                <p class="profile-description">Joined AirGuitar after a glass of cold beer with Kim, after that he sold his soul to making awesome music & products for Air Guitar. You'll mostly find him in our well stocked pantry, munching away on a peanut butter jello sandwich.</p>
-                                <div class="social">
-                                    <ul class="social-icons">
-                                        <li><a href="//www.facebook.com/brandon.seet.7"><i class="font-icon-social-facebook"></i></a></li>
-                                        <li><a href="//twitter.com/teesnodnarb"><i class="font-icon-social-twitter"></i></a></li>
-                                        <li><a href="//www.linkedin.com/profile/view?id=292659606"><i class="font-icon-social-linkedin"></i></a></li>
-                                    </ul>
+                                    <h3>Customize Your Set Up</h3>
+                                    <p>Mix and match the pedals of your choice and switch em’ up whenever you need to. Create your own unique sick solos!</p>
                                 </div>
                             </div>
-                            <!-- End Profile -->
+                            <div class="span4">
+                                <div class="services-box">
+                                    <div class="icon">
+                                        <span class="font-icon-map"></span>
+                                    </div>
+                                    <h3>Record Your Tracks</h3>
+                                    <p>Record what you made and be the next Jimi Hendrix.</p>
+                                </div>
+                            </div>
                         </div>
-                        <!-- End People -->
+                        <!-- End Services Boxes -->
                     </div>
                 </div>
-                <!-- End Title Page -->
-                </br>
-                </br>
-                <div class="sep">
-                    <span class="separator"></span>
-                </div>
-
-                <div class="row margin-40">
-                    <div class="span4">
-                        <h3>Our Culture</h3>
-
-                        <p>We strive to maintain the open culture often associated with startups, in which everyone is a hands-on contributor and feels comfortable sharing ideas and opinions. In our weekly all-hands (“TGIF”) meetings—not to mention over email or in the cafe—AirGs ask questions directly to Kim or Brandon about any number of company issues. Our offices and cafes are designed to encourage interactions between AirGs within and across teams, and to spark conversation about work as well as play.</p>
-                    </div>
-                    <div class="span4">
-                        <h3>Our Method</h3>
-                        <p> Non-stop grinding and gnawing on our objectives until they done!</p>
-                        <p> We work hard, play hard and most importantly enjoy the finer things in life.</p>
-                    </div>
-                    <div class="span4">
-                        <h3>Our Skills</h3>
-                        <div class="progress-bar">
-                            <div class="progress">
-                                <span class="field">Design</span>
-                                <span class="field-value">70%</span>
-                                <div class="bar" style="width: 70%;"></div>
-                            </div>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress">
-                                <span class="field">Development</span>
-                                <span class="field-value">85%</span>
-                                <div class="bar" style="width: 85%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar">
-                            <div class="progress">
-                                <span class="field">UX/UI</span>
-                                <span class="field-value">60%</span>
-                                <div class="bar" style="width: 60%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar">
-                            <div class="progress">
-                                <span class="field">Enjoying The Finer Things In Life</span>
-                                <span class="field-value">100%</span>
-                                <div class="bar" style="width: 100%;"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
             </div>
+            <!-- End Title Page -->
         </div>
-        <!-- End About Section -->
-        <!-- Pricing -->
-        <div id="pricing" class="page">
-            <div class="container">
-                <!-- Title Page -->
-                <div class="row">
-                    <div class="span12">
-                        <div class="title-page">
-                            <h2 class="title">Pricing</h2>
-                            <h3 class="title-description">Learn About our Pricing</h3>
+    </div>
+    <!-- End Our Work Section -->
+    <!-- About Section -->
+    <div id="about" class="page-alternate">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">About Us</h2>
+                        <h3 class="title-description">Our Team</h3>
+                        <div class="page-description">
+                            <p>We’re a pair of fun loving, guitar smashing entrepreneurs bred from the flames of Singapore Management University School of Information Systems.</p>
                         </div>
                     </div>
+                    <!-- People -->
+                    <div class="row">
+                        <!-- Start Profile -->
+                        <div class="span6 profile">
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-text-thumb">CEO/Founder</span>
+                                </div>
+                                <img src="_include/img/profile/profile-kim.jpg" alt="Kim Evangelista" />
+                            </div>
+                            <h3 class="profile-name">Kim Evangelista</h3>
+                            <p class="profile-description">Started AirGuitar because effects pedals are too damn expensive. His hair is much longer than what the picture above shows. Strongly believes that beer is good for idea generation and coffee is for execution.</p>
+                            <div class="social">
+                                <ul class="social-icons">
+                                    <li><a href="//www.facebook.com/kime924"><i class="font-icon-social-facebook"></i></a></li>
+                                    <li><a href="//twitter.com/kime924"><i class="font-icon-social-twitter"></i></a></li>
+                                    <li><a href="//sg.linkedin.com/in/kimevangelista"><i class="font-icon-social-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Profile -->
+                        <!-- Start Profile -->
+                        <div class="span6 profile">
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-text-thumb">CFO</span>
+                                </div>
+                                <img src="_include/img/profile/profile-brandon.jpg" alt="Brandon Seet" />
+                            </div>
+                            <h3 class="profile-name">Brandon Seet</h3>
+                            <p class="profile-description">Joined AirGuitar after a glass of cold beer with Kim, after that he sold his soul to making awesome music & products for Air Guitar. You'll mostly find him in our well stocked pantry, munching away on a peanut butter jello sandwich.</p>
+                            <div class="social">
+                                <ul class="social-icons">
+                                    <li><a href="//www.facebook.com/brandon.seet.7"><i class="font-icon-social-facebook"></i></a></li>
+                                    <li><a href="//twitter.com/teesnodnarb"><i class="font-icon-social-twitter"></i></a></li>
+                                    <li><a href="//www.linkedin.com/profile/view?id=292659606"><i class="font-icon-social-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Profile -->
+                    </div>
+                    <!-- End People -->
                 </div>
-
-                <!-- End Title Page -->
-                <section id="pricePlans">
-                    <ul id="plans">
-                        <li class="plan">
-                            <ul class="planContainer">
-                                <li class="title"><h2>Beginner</h2></li>
-                                <li class="price"><p>Free</p></li>
-                                <li>
-                                    <ul class="options">
-                                        <li>1x <span>Pedal Slot</span></li>
-                                        <li>Basic <span>Pedals Variety</span></li>
-                                        <li>No <span>Combination Feature</span></li>
-                                        <li>Online <span>Playback</span></li>
-                                        <li>No <span>Recording</span></li>
-                                    </ul>
-                                </li>
-                                <li class="price-button" data-ng-show="logged" data-ng-disabled="!facebookReady"><a href="#">Join & Try Now!</a></li> <!-- Change aref to demo -->
-                                <li class="price-button" data-ng-show="!logged" data-ng-disabled="!facebookReady"><a onclick="jQuery('#modal-1').modal('show')">Join & Try Now!</a></li> 
-
-
-                            </ul>
-                        </li>
-                        <li class="plan">
-                            <ul class="planContainer">
-                                <li class="title"><h2 class="bestPlanTitle">Semi-Pro</h2></li>
-                                <li class="price"><p class="bestPlanPrice">$20.99/month</p></li>
-                                <li>
-                                    <ul class="options">
-                                        <li>7x <span>Pedal Slots</span></li>
-                                        <li>Advance <span>Pedals Variety</span></li>
-                                        <li>Activated <span>Combination Feature</span></li>
-                                        <li>Online <span>Playback</span></li>
-                                        <li>Activated <span>Recording</span></li>
-                                    </ul>
-                                </li>
-                                <li class="price-button" data-ng-show="logged" data-ng-disabled="!facebookReady"><a class="bestPlanButton" href="payment/initiate/1">Subscribe Now!</a></li> <!-- Change aref paypal -->
-                                <li class="price-button" data-ng-show="!logged" data-ng-disabled="!facebookReady"><a class="bestPlanButton" onclick="jQuery('#modal-2').modal('show')">Subscribe Now!</a></li> 
-                            </ul>
-                        </li>
-                        <li class="plan">
-                            <ul class="planContainer">
-                                <li class="title"><h2>Professional</h2></li>
-                                <li class="price"><p>$41.99/<span>month</span></p></li>
-                                <li>
-                                    <ul class="options">
-                                        <li>15x <span>Pedal Slots</span></li>
-                                        <li>Signature <span>Pedals Variety</span></li>
-                                        <li>Activated <span>Combination Feature</span></li>
-                                        <li>Live <span>Playback</span></li>
-                                        <li>Activated <span>Recording & Track Editing</span></li>
-                                    </ul>
-                                </li>
-                                <li class="price-button" data-ng-show="logged" data-ng-disabled="!facebookReady"><a href="payment/initiate/2">Subscribe Now!</a></li> <!-- Change aref paypal -->
-                                <li class="price-button" data-ng-show="!logged" data-ng-disabled="!facebookReady"><a onclick="jQuery('#modal-3').modal('show')">Subscribe Now!</a></li> 
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
             </div>
-
+            <!-- End Title Page -->
+            </br>
+            </br>
             <div class="sep">
                 <span class="separator"></span>
             </div>
-        </div>
-        <!-- End Pricing Section -->
-        <!-- Big Blockquote -->
-        <div class="big-quote page-alternate">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <p>We bring a personal approach to sound engineering, which allows our users to create their own unique sound without worrying about all the nitty-gritty details.</p>
-                        <span class="font-icon-blockquote"></span>
+            <div class="row margin-40">
+                <div class="span4">
+                    <h3>Our Culture</h3>
+                    <p>We strive to maintain the open culture often associated with startups, in which everyone is a hands-on contributor and feels comfortable sharing ideas and opinions. In our weekly all-hands (“TGIF”) meetings—not to mention over email or in the cafe—AirGs ask questions directly to Kim or Brandon about any number of company issues. Our offices and cafes are designed to encourage interactions between AirGs within and across teams, and to spark conversation about work as well as play.</p>
+                </div>
+                <div class="span4">
+                    <h3>Our Method</h3>
+                    <p> Non-stop grinding and gnawing on our objectives until they done!</p>
+                    <p> We work hard, play hard and most importantly enjoy the finer things in life.</p>
+                </div>
+                <div class="span4">
+                    <h3>Our Skills</h3>
+                    <div class="progress-bar">
+                        <div class="progress">
+                            <span class="field">Design</span>
+                            <span class="field-value">70%</span>
+                            <div class="bar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress">
+                            <span class="field">Development</span>
+                            <span class="field-value">85%</span>
+                            <div class="bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress">
+                            <span class="field">UX/UI</span>
+                            <span class="field-value">60%</span>
+                            <div class="bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress">
+                            <span class="field">Enjoying The Finer Things In Life</span>
+                            <span class="field-value">100%</span>
+                            <div class="bar" style="width: 100%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Big Blockquote -->
-        <!-- Google Map -->
-        <div id="map-area">
-            <div class="map" id="locationMap"></div>
-        </div>
-        <!-- End Google Map -->
-        <!-- Contact Section -->
-        <div id="contact" class="page">
-            <div class="container">
-                <!-- Title Page -->
-                <div class="row">
-                    <div class="span12">
-                        <div class="title-page">
-                            <h2 class="title">Contact Us</h2>
-                            <h3 class="title-description">If you want know more about us or have any queries, feel free to drop us a message.</h3>
-                        </div>
+    </div>
+    <!-- End About Section -->
+    <!-- Pricing -->
+    <div id="pricing" class="page">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">Pricing</h2>
+                        <h3 class="title-description">Learn About our Pricing</h3>
                     </div>
                 </div>
-                <!-- End Title Page -->
-                <!-- Contact Form -->
-                <div class="row">
-                    <div class="span9">
-                        <form id="contact-form" class="contact-form" action="#" />
+            </div>
+            <!-- End Title Page -->
+            <section id="pricePlans">
+                <ul id="plans">
+                    <li class="plan">
+                        <ul class="planContainer">
+                            <li class="title"><h2>Beginner</h2></li>
+                            <li class="price"><p>Free</p></li>
+                            <li>
+                                <ul class="options">
+                                    <li>1x <span>Pedal Slot</span></li>
+                                    <li>Basic <span>Pedals Variety</span></li>
+                                    <li>No <span>Combination Feature</span></li>
+                                    <li>Online <span>Playback</span></li>
+                                    <li>No <span>Recording</span></li>
+                                </ul>
+                            </li>
+                            <li class="price-button" data-ng-show="logged" data-ng-disabled="!facebookReady"><a href="#">Join & Try Now!</a></li> <!-- Change aref to demo -->
+                            <li class="price-button" data-ng-show="!logged" data-ng-disabled="!facebookReady"><a onclick="jQuery('#modal-1').modal('show')">Join & Try Now!</a></li>
+                        </ul>
+                    </li>
+                    <li class="plan">
+                        <ul class="planContainer">
+                            <li class="title"><h2 class="bestPlanTitle">Semi-Pro</h2></li>
+                            <li class="price"><p class="bestPlanPrice">$29.99/month</p></li>
+                            <li>
+                                <ul class="options">
+                                    <li>7x <span>Pedal Slots</span></li>
+                                    <li>Advance <span>Pedals Variety</span></li>
+                                    <li>Activated <span>Combination Feature</span></li>
+                                    <li>Online <span>Playback</span></li>
+                                    <li>Activated <span>Recording</span></li>
+                                </ul>
+                            </li>
+                            <li class="price-button" data-ng-show="logged" data-ng-disabled="!facebookReady"><a class="bestPlanButton" href="payment/initiate/1">Subscribe Now!</a></li> <!-- Change aref paypal -->
+                            <li class="price-button" data-ng-show="!logged" data-ng-disabled="!facebookReady"><a class="bestPlanButton" onclick="jQuery('#modal-2').modal('show')">Subscribe Now!</a></li>
+                        </ul>
+                    </li>
+                    <li class="plan">
+                        <ul class="planContainer">
+                            <li class="title"><h2>Professional</h2></li>
+                            <li class="price"><p>$62.99/<span>month</span></p></li>
+                            <li>
+                                <ul class="options">
+                                    <li>15x <span>Pedal Slots</span></li>
+                                    <li>Signature <span>Pedals Variety</span></li>
+                                    <li>Activated <span>Combination Feature</span></li>
+                                    <li>Live <span>Playback</span></li>
+                                    <li>Activated <span>Recording & Track Editing</span></li>
+                                </ul>
+                            </li>
+                            <li class="price-button" data-ng-show="logged" data-ng-disabled="!facebookReady"><a href="payment/initiate/2">Subscribe Now!</a></li> <!-- Change aref paypal -->
+                            <li class="price-button" data-ng-show="!logged" data-ng-disabled="!facebookReady"><a onclick="jQuery('#modal-3').modal('show')">Subscribe Now!</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="sep">
+            <span class="separator"></span>
+        </div>
+    </div>
+    <!-- End Pricing Section -->
+    <!-- Big Blockquote -->
+    <div class="big-quote page-alternate">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <p>We bring a personal approach to sound engineering, which allows our users to create their own unique sound without worrying about all the nitty-gritty details.</p>
+                    <span class="font-icon-blockquote"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Big Blockquote -->
+    <!-- Google Map -->
+    <div id="map-area">
+        <div class="map" id="locationMap"></div>
+    </div>
+    <!-- End Google Map -->
+    <!-- Contact Section -->
+    <div id="contact" class="page">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">Contact Us</h2>
+                        <h3 class="title-description">If you want know more about us or have any queries, feel free to drop us a message.</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- End Title Page -->
+            <!-- Contact Form -->
+            <div class="row">
+                <div class="span9" ng-controller="msgController">
+                    <form id="contact-form" class="contact-form" action="#" />
                         <p class="contact-name">
-                            <input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
+                            <input id="contact_name" ng-model="newMsg.name" type="text" placeholder="Full Name" value="" name="name" />
                         </p>
                         <p class="contact-email">
-                            <input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
+                            <input id="contact_email" ng-model="newMsg.email" type="text" placeholder="Email Address" value="" name="email" />
                         </p>
                         <p class="contact-message">
-                            <textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
+                            <textarea id="contact_message" ng-model="newMsg.message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
                         </p>
                         <p class="contact-submit">
-                            <a id="contact-submit" class="submit" href="#">Send</a>
+                            <a id="contact-submit" class="submit" ng-click="save()">Send</a>
                         </p>
                         <div id="response">
                         </div>
-                        </form>
-                    </div>
-                    <div class="span3">
-                        <div class="contact-details">
-                            <h3>Contact Details</h3>
-                            <ul>
-                                <li><a href="#">airguitar.cc@gmail.com</a></li>
-                                <li>(+65) 87004358</li>
-                                <li>
-                                    AirGuitar
-                                    <br />
-                                    71 Stamford Road Singapore 178895
-                                    <br />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-                <!-- End Services Form -->
-            </div>
-        </div>
-        <!-- End Contact Section -->
-        <!-- Socialize -->
-        <div id="social-area" class="page-alternate">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        <nav id="social">
-                            <ul>
-                                <li><a href="#social-area" title="Follow Us on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                                <li><a href="#social-area" title="Follow Us on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                                <li><a href="#social-area" title="Follow Us on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <p class="credits" style="padding-top:100px;">&copy;2013 AirGuitar.</p>
-            </div>
-        </div>
-        <!-- End Socialize -->
-        <!-- Back To Top -->
-        <a id="back-to-top" href="#">
-            <i class="font-icon-arrow-simple-up"></i>
-        </a>
-        <!-- End Back to Top -->
-        <!-- Js -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
-        <script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
-        <script src="_include/js/supersized.3.2.7.min.js"></script> <!-- Slider -->
-        <script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
-        <script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
-        <script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
-        <script src="_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
-        <script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
-        <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
-        <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-        <script src="_include/js/main.js"></script> <!-- Default JS -->
-        <!-- End Js -->
-        <!--
-        <ul id="supersized" class="quality" style="visibility: visible;">
-            <li class="slide-0" style="visibility: visible; top: 0px;">
-                <a target="_blank">
-                    <img src="_include/img/slider-images/image01.jpg" style="width: 1583px; height: 1060.61px; left: 0px; top: -143px;">
-                </a>
-            </li>
-            <li class="slide-1" style="visibility: visible; top: 0px;">
-                <a target="_blank">
-                    <img src="_include/img/slider-images/image02.jpg" style="width: 1583px; left: 0px; top: -174.5px; height: 1123.93px;">
-                </a>
-            </li>
-            <li class="slide-2 prevslide" style="visibility: visible; top: 0px;">
-                <a target="_blank">
-                    <img src="_include/img/slider-images/image03.jpg" style="width: 1583px; height: 1060.61px; left: 0px; top: -143px;">
-                </a>y
-            </li>
-            <li class="slide-3 activeslide" style="visibility: visible; top: 0px;">
-                <a target="_blank">
-                    <img src="_include/img/slider-images/image04.jpg" style="width: 1583px; left: 0px; top: -214px; height: 1203.08px;">
-                </a>
-            </li>
-        </ul>-->
-        <!-- Model 1 for free fb login -->
-        <div class="modal fade in" id="modal-1" aria-hidden="false" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Require Login!</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        Please Login to Facebook To Continue
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
-                        <button type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!--might need to add Aref here to link to demo -->
+                <div class="span3">
+                    <div class="contact-details">
+                        <h3>Contact Details</h3>
+                        <ul>
+                            <li><a href="#">airguitar.cc@gmail.com</a></li>
+                            <li>(+65) 87004358</li>
+                            <li>
+                                AirGuitar
+                                <br />
+                                71 Stamford Road Singapore 178895
+                                <br />
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <!-- End Services Form -->
         </div>
-        <!-- Model 2 for semi pro fb login -->
-        <div class="modal fade in" id="modal-2" aria-hidden="false" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Require Login!</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        Please Login to Facebook To Continue
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
-                        <button href="payment/initiate/1" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
-                    </div>
+    </div>
+    <!-- End Contact Section -->
+    <!-- Socialize -->
+    <div id="social-area" class="page-alternate">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <nav id="social">
+                        <ul>
+                            <li><a href="#social-area" title="Follow Us on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                            <li><a href="#social-area" title="Follow Us on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+                            <li><a href="#social-area" title="Follow Us on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <p class="credits" style="padding-top:100px;">&copy;2013 AirGuitar.</p>
+        </div>
+    </div>
+    <!-- End Socialize -->
+    <!-- Back To Top -->
+    <a id="back-to-top" href="#">
+        <i class="font-icon-arrow-simple-up"></i>
+    </a>
+    <!-- End Back to Top -->
+    <!-- Js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+    <script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+    <script src="_include/js/supersized.3.2.7.min.js"></script> <!-- Slider -->
+    <script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
+    <script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
+    <script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
+    <script src="_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
+    <script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+    <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
+    <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+    <script src="_include/js/main.js"></script> <!-- Default JS -->
+    <!-- End Js -->
+    <!--
+    <ul id="supersized" class="quality" style="visibility: visible;">
+        <li class="slide-0" style="visibility: visible; top: 0px;">
+            <a target="_blank">
+                <img src="_include/img/slider-images/image01.jpg" style="width: 1583px; height: 1060.61px; left: 0px; top: -143px;">
+            </a>
+        </li>
+        <li class="slide-1" style="visibility: visible; top: 0px;">
+            <a target="_blank">
+                <img src="_include/img/slider-images/image02.jpg" style="width: 1583px; left: 0px; top: -174.5px; height: 1123.93px;">
+            </a>
+        </li>
+        <li class="slide-2 prevslide" style="visibility: visible; top: 0px;">
+            <a target="_blank">
+                <img src="_include/img/slider-images/image03.jpg" style="width: 1583px; height: 1060.61px; left: 0px; top: -143px;">
+            </a>y
+        </li>
+        <li class="slide-3 activeslide" style="visibility: visible; top: 0px;">
+            <a target="_blank">
+                <img src="_include/img/slider-images/image04.jpg" style="width: 1583px; left: 0px; top: -214px; height: 1203.08px;">
+            </a>
+        </li>
+    </ul>-->
+    <!-- Model 1 for free fb login -->
+    <div class="modal fade in" id="modal-1" aria-hidden="false" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Require Login!</h4>
+                </div>
+                <div class="modal-body">
+                    Please Login to Facebook To Continue
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!--might need to add Aref here to link to demo -->
                 </div>
             </div>
         </div>
-        <!-- Model 2 for pro fb login -->
-        <div class="modal fade in" id="modal-3" aria-hidden="false" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Require Login!</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        Please Login to Facebook To Continue
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
-                        <button href="payment/initiate/2" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
-                    </div>
+    </div>
+    <!-- Model 2 for semi pro fb login -->
+    <div class="modal fade in" id="modal-2" aria-hidden="false" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Require Login!</h4>
+                </div>
+                <div class="modal-body">
+                    Please Login to Facebook To Continue
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
+                    <button href="payment/initiate/1" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
                 </div>
             </div>
         </div>
-
-    </body>
-
-
+    </div>
+    <!-- Model 2 for pro fb login -->
+    <div class="modal fade in" id="modal-3" aria-hidden="false" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Require Login!</h4>
+                </div>
+                <div class="modal-body">
+                    Please Login to Facebook To Continue
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">I Rather Not!</button>
+                    <button href="payment/initiate/2" type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="IntentLogin()">Login</button> <!-- link to paypal -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
