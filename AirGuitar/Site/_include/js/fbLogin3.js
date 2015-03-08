@@ -169,7 +169,7 @@ angular.module('CiulApp', ['facebook', 'firebase'])
     }
 ])
 
-.controller('subscriptionController', ['$scope', '$firebase',
+.controller('subscriptionController', ['$scope', '$firebase', '$rootScope', '$location',
     function($scope, $firebase, $rootScope, $location) {
 
         //extract subscription id from url
