@@ -96,7 +96,7 @@ app.get('/payment/execute/', function (req, res) {
             else{
                 res.json({'status':'success', 'data': agreement});
                 res.writeHead(200,{
-                    'Location': 'http://airguitar.herokuapp.com/app.html'
+                    'Location': __dirname + '/AirGuitar/Site/app.html'
 
                 });
 
@@ -106,7 +106,7 @@ app.get('/payment/execute/', function (req, res) {
     else{
         res.json({'status':'failed'})
         res.writeHead(200,{
-                    'Location': 'http://airguitar.herokuapp.com'
+                    'Location': __dirname + '/AirGuitar/Site/index.html'
 
                 });
     }
