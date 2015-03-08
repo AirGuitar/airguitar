@@ -83,19 +83,32 @@ app.get('/payment/initiate/:planId', function (req, res) {
 app.get('/payment/execute/', function (req, res) {
     // TODO: using information in the session, and agreement ID, store the information in Firebase
     //checks if there is a token
+    
     if(req.query.token){
+
+
         //starts the billingAgreement and collects the money
         paypal.billingAgreement.execute(req.query.token, {}, function(error, agreement){
+
             if(error){
                 throw error;
             }
             else{
                 res.json({'status':'success', 'data': agreement});
+                res.writeHead(200,{
+                    'Location': 'http://airguitar.herokuapp.com/app.html'
+
+                });
+
             }
         });
     }
     else{
         res.json({'status':'failed'})
+        res.writeHead(200,{
+                    'Location': 'http://airguitar.herokuapp.com'
+
+                });
     }
 })
 
@@ -115,6 +128,9 @@ app.get('/payment/cancel/:agreementId', function(req, res){
                 }
                 //if cancelled, agreement.state == "Cancelled"
                 res.json({'status':'success', 'data': agreement});
+
+
+
             });
         }
     });
