@@ -175,6 +175,7 @@ angular.module('CiulApp', ['facebook', 'firebase'])
         //extract subscription id from url
         //ex.) https://airguitar.herokuapp.com/app.html?token=EC-1LW33499VX4122816
         $rootScope.location = $location;
+        $location
         console.log($rootScope.location);
 
         //store subscription
