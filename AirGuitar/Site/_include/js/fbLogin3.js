@@ -1,9 +1,5 @@
 angular.module('CiulApp', ['facebook', 'firebase'])
 
-.addSubscription([
-
-])
-
 .config([
     'FacebookProvider',
     function(FacebookProvider) {
